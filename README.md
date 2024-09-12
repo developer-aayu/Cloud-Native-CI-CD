@@ -37,7 +37,7 @@ docker build -t <your-docker-username>/go-web-app .
 Command to run the Docker container:
 
 ```bash
-docker run -p 8080:8080 <your-docker-username>/go-web-app
+docker run -p 8000:8000 <your-docker-username>/go-web-app
 ```
 
 Command to push the Docker container to Docker Hub:
