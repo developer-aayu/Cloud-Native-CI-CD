@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-web-app-deployment
+  labels:
+    app: go-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-web-app
+  template:
+    metadata:
+      labels:
+        app: go-web-app     # this lable will be selected by service to perform operations
+    spec:
+      containers:
+      - name: go-web-app
+        image: aayusharma1410/cloud-native-img:v1
+        ports:
+        - containerPort: 8000
